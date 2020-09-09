@@ -1,0 +1,13 @@
+
+  * {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+  }
+
+
+  img{
+    float left;
+
+  #unicorn-template{
+    border: 1px solid black;
+  }
