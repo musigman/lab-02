@@ -1,7 +1,7 @@
 'use strict';
 const uniqueKeywordArray = [];
 const hornedBeastArray = [];
-$.ajax('data/page-1.json', { method: 'GET', dataType: 'JSON' })
+$.ajax('data/page-2.json', { method: 'GET', dataType: 'JSON' })
   .then(animals => {
     animals.forEach(hornedBeast => {
       const beast = new Unicorn(hornedBeast);
@@ -30,14 +30,6 @@ const animalRender = () => {
     $('main').append(beast.createHTML());
   })
 }
-// Unicorn.prototype.render = function () {
-//   const template = $('#photo-template').html();
-//   const $newSection = $(`<section class="${this.keyword}">${template}</section>`);
-//   $newSection.find('h2').text(this.title);
-//   $newSection.find('p').text(`${this.description}. Number of horns ${this.horns}`);
-//   $newSection.find('img').attr('src', this.image);
-//   $('main').append($newSection);
-// }
 function generateUniqueKeywords() {
   hornedBeastArray.forEach(beast => {
     if (!uniqueKeywordArray.includes(beast.keyword)) {
@@ -59,4 +51,3 @@ function handleChange() {
   $(`div[class=${this.value}]`).show();
 }
 $('select').on('change', handleChange);
-

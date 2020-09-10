@@ -1,6 +1,8 @@
-body {
-background-color: yellowgreen;
-margin: auto;
-
-
+* {
+  background-color: cornflowerblue;
+}
+img {
+  height: 250px;
+  width: 250px;
+  margin: 10px;
 }
